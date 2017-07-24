@@ -1,0 +1,147 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SselphGUI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="add_not_found" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-add_not_found=false</Value>
+    </Setting>
+    <Setting Name="append" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-append=false</Value>
+    </Setting>
+    <Setting Name="console_img" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-console_img=b</Value>
+    </Setting>
+    <Setting Name="console_src" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-console_src=gdb</Value>
+    </Setting>
+    <Setting Name="convert_videos" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-convert_videos=false</Value>
+    </Setting>
+    <Setting Name="download_images" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-download_images=true</Value>
+    </Setting>
+    <Setting Name="download_marquees" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-download_marquees=false</Value>
+    </Setting>
+    <Setting Name="download_videos" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-download_videos=false</Value>
+    </Setting>
+    <Setting Name="extra_ext" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-extra_ext=</Value>
+    </Setting>
+    <Setting Name="image_dir" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="image_path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-image_path=images</Value>
+    </Setting>
+    <Setting Name="image_suffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-image_suffix=-image</Value>
+    </Setting>
+    <Setting Name="img_format" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-img_format=jpg</Value>
+    </Setting>
+    <Setting Name="img_workers" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-img_workers=0</Value>
+    </Setting>
+    <Setting Name="lang" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-lang=en</Value>
+    </Setting>
+    <Setting Name="mame" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-mame=false</Value>
+    </Setting>
+    <Setting Name="mame_img" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-mame_img=t,m,s,c</Value>
+    </Setting>
+    <Setting Name="mame_src" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-mame_src=adb,gdb</Value>
+    </Setting>
+    <Setting Name="marquee_dir" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="marquee_format" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-marquee_format=png</Value>
+    </Setting>
+    <Setting Name="marquee_path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-marquee_path=images</Value>
+    </Setting>
+    <Setting Name="marquee_suffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-marquee_suffix=-marquee</Value>
+    </Setting>
+    <Setting Name="max_height" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="max_width" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-max_width=400</Value>
+    </Setting>
+    <Setting Name="missing" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="nested_img_dir" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-nested_img_dir=false</Value>
+    </Setting>
+    <Setting Name="no_thumb" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-no_thumb</Value>
+    </Setting>
+    <Setting Name="output_file" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="overview_len" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="region" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-region=us,wor,eu,jp,fr,xx</Value>
+    </Setting>
+    <Setting Name="retries" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-retries=2</Value>
+    </Setting>
+    <Setting Name="rom_dir" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="rom_path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-rom_path=.</Value>
+    </Setting>
+    <Setting Name="skip_check" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-skip_check=true</Value>
+    </Setting>
+    <Setting Name="ss_password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-ss_password=</Value>
+    </Setting>
+    <Setting Name="ss_user" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-ss_user=</Value>
+    </Setting>
+    <Setting Name="strip_unicode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-strip_unicode=false</Value>
+    </Setting>
+    <Setting Name="update_cache" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-update_cache=true</Value>
+    </Setting>
+    <Setting Name="use_filename" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-use_filename=false</Value>
+    </Setting>
+    <Setting Name="use_nointro_name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-use_nointro_name=true</Value>
+    </Setting>
+    <Setting Name="video_dir" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="video_path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-video_path=images</Value>
+    </Setting>
+    <Setting Name="video_suffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-video_suffix=-video</Value>
+    </Setting>
+    <Setting Name="workers" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-workers=1</Value>
+    </Setting>
+    <Setting Name="image_path_string" Type="System.String" Scope="User">
+      <Value Profile="(Default)">images</Value>
+    </Setting>
+    <Setting Name="marquee_path_string" Type="System.String" Scope="User">
+      <Value Profile="(Default)">images</Value>
+    </Setting>
+    <Setting Name="video_path_string" Type="System.String" Scope="User">
+      <Value Profile="(Default)">images</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
