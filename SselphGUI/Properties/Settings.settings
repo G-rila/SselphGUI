@@ -51,10 +51,10 @@
       <Value Profile="(Default)">-mame=false</Value>
     </Setting>
     <Setting Name="mame_img" Type="System.String" Scope="User">
-      <Value Profile="(Default)">-mame_img=t,m,s,c</Value>
+      <Value Profile="(Default)">-mame_img=t</Value>
     </Setting>
     <Setting Name="mame_src" Type="System.String" Scope="User">
-      <Value Profile="(Default)">-mame_src=adb,gdb</Value>
+      <Value Profile="(Default)">-mame_src=adb</Value>
     </Setting>
     <Setting Name="marquee_dir" Type="System.String" Scope="User">
       <Value Profile="(Default)" />

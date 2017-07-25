@@ -1,0 +1,14 @@
+C:\Users\ehenn\OneDrive\VS2017 Projects\SselphGUI\SselphGUI\bin\Release\SselphGUI.exe.config
+C:\Users\ehenn\OneDrive\VS2017 Projects\SselphGUI\SselphGUI\bin\Release\scraper.exe
+C:\Users\ehenn\OneDrive\VS2017 Projects\SselphGUI\SselphGUI\bin\Release\license.rtf
+C:\Users\ehenn\OneDrive\VS2017 Projects\SselphGUI\SselphGUI\bin\Release\SselphGUI.exe
+C:\Users\ehenn\OneDrive\VS2017 Projects\SselphGUI\SselphGUI\bin\Release\SselphGUI.pdb
+C:\Users\ehenn\OneDrive\VS2017 Projects\SselphGUI\SselphGUI\bin\Release\ConsoleControl.dll
+C:\Users\ehenn\OneDrive\VS2017 Projects\SselphGUI\SselphGUI\bin\Release\ConsoleControlAPI.dll
+C:\Users\ehenn\OneDrive\VS2017 Projects\SselphGUI\SselphGUI\obj\Release\SselphGUI.AboutForm.resources
+C:\Users\ehenn\OneDrive\VS2017 Projects\SselphGUI\SselphGUI\obj\Release\SselphGUI.ConfigureSettingsUserControl.resources
+C:\Users\ehenn\OneDrive\VS2017 Projects\SselphGUI\SselphGUI\obj\Release\SselphGUI.MainForm.resources
+C:\Users\ehenn\OneDrive\VS2017 Projects\SselphGUI\SselphGUI\obj\Release\SselphGUI.Properties.Resources.resources
+C:\Users\ehenn\OneDrive\VS2017 Projects\SselphGUI\SselphGUI\obj\Release\SselphGUI.csproj.GenerateResource.Cache
+C:\Users\ehenn\OneDrive\VS2017 Projects\SselphGUI\SselphGUI\obj\Release\SselphGUI.exe
+C:\Users\ehenn\OneDrive\VS2017 Projects\SselphGUI\SselphGUI\obj\Release\SselphGUI.pdb

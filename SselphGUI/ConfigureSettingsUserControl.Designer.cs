@@ -107,6 +107,13 @@
             this.ResetToDefaultsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AppStatusStrip = new System.Windows.Forms.StatusStrip();
+            this.MameImgComboBox = new System.Windows.Forms.ComboBox();
+            this.MameImgLabel = new System.Windows.Forms.Label();
+            this.MameSrcComboBox = new System.Windows.Forms.ComboBox();
+            this.MameSrcLabel = new System.Windows.Forms.Label();
+            this.ModeComboBox = new System.Windows.Forms.ComboBox();
+            this.ModeLabel = new System.Windows.Forms.Label();
+            this.ModeToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.AppTabControl.SuspendLayout();
             this.MainTabPage.SuspendLayout();
             this.SettingsTabPage.SuspendLayout();
@@ -119,6 +126,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MaxWidthNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaxHeightNumericUpDown)).BeginInit();
             this.AppMenuStrip.SuspendLayout();
+            this.AppStatusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // SaveSettingsButton
@@ -229,6 +237,8 @@
             // 
             // SettingsTabPage
             // 
+            this.SettingsTabPage.Controls.Add(this.ModeLabel);
+            this.SettingsTabPage.Controls.Add(this.ModeComboBox);
             this.SettingsTabPage.Controls.Add(this.ScraperOptionsGroupBox);
             this.SettingsTabPage.Controls.Add(this.FileOptionsGroupBox);
             this.SettingsTabPage.Controls.Add(this.MediaOptionsGroupBox);
@@ -244,8 +254,10 @@
             // 
             // ScraperOptionsGroupBox
             // 
+            this.ScraperOptionsGroupBox.Controls.Add(this.MameSrcLabel);
             this.ScraperOptionsGroupBox.Controls.Add(this.ConsoleSrcComboBox);
             this.ScraperOptionsGroupBox.Controls.Add(this.SSPasswordLabel);
+            this.ScraperOptionsGroupBox.Controls.Add(this.MameSrcComboBox);
             this.ScraperOptionsGroupBox.Controls.Add(this.SkipCheckCheckBox);
             this.ScraperOptionsGroupBox.Controls.Add(this.SSPasswordTextBox);
             this.ScraperOptionsGroupBox.Controls.Add(this.ConsoleSrcLabel);
@@ -258,9 +270,9 @@
             this.ScraperOptionsGroupBox.Controls.Add(this.RetriesLabel);
             this.ScraperOptionsGroupBox.Controls.Add(this.WorkersLabel);
             this.ScraperOptionsGroupBox.Controls.Add(this.RetriesNumericUpDown);
-            this.ScraperOptionsGroupBox.Location = new System.Drawing.Point(6, 255);
+            this.ScraperOptionsGroupBox.Location = new System.Drawing.Point(6, 6);
             this.ScraperOptionsGroupBox.Name = "ScraperOptionsGroupBox";
-            this.ScraperOptionsGroupBox.Size = new System.Drawing.Size(229, 212);
+            this.ScraperOptionsGroupBox.Size = new System.Drawing.Size(229, 237);
             this.ScraperOptionsGroupBox.TabIndex = 10;
             this.ScraperOptionsGroupBox.TabStop = false;
             this.ScraperOptionsGroupBox.Text = "Scraper Options";
@@ -281,7 +293,7 @@
             // SSPasswordLabel
             // 
             this.SSPasswordLabel.AutoSize = true;
-            this.SSPasswordLabel.Location = new System.Drawing.Point(8, 78);
+            this.SSPasswordLabel.Location = new System.Drawing.Point(8, 105);
             this.SSPasswordLabel.Name = "SSPasswordLabel";
             this.SSPasswordLabel.Size = new System.Drawing.Size(73, 13);
             this.SSPasswordLabel.TabIndex = 5;
@@ -290,7 +302,7 @@
             // SkipCheckCheckBox
             // 
             this.SkipCheckCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.SkipCheckCheckBox.Location = new System.Drawing.Point(111, 101);
+            this.SkipCheckCheckBox.Location = new System.Drawing.Point(111, 128);
             this.SkipCheckCheckBox.Name = "SkipCheckCheckBox";
             this.SkipCheckCheckBox.Size = new System.Drawing.Size(15, 20);
             this.SkipCheckCheckBox.TabIndex = 3;
@@ -298,7 +310,7 @@
             // 
             // SSPasswordTextBox
             // 
-            this.SSPasswordTextBox.Location = new System.Drawing.Point(111, 75);
+            this.SSPasswordTextBox.Location = new System.Drawing.Point(111, 102);
             this.SSPasswordTextBox.Name = "SSPasswordTextBox";
             this.SSPasswordTextBox.Size = new System.Drawing.Size(100, 20);
             this.SSPasswordTextBox.TabIndex = 2;
@@ -316,7 +328,7 @@
             // SSUserLabel
             // 
             this.SSUserLabel.AutoSize = true;
-            this.SSUserLabel.Location = new System.Drawing.Point(8, 52);
+            this.SSUserLabel.Location = new System.Drawing.Point(8, 79);
             this.SSUserLabel.Name = "SSUserLabel";
             this.SSUserLabel.Size = new System.Drawing.Size(75, 13);
             this.SSUserLabel.TabIndex = 4;
@@ -324,14 +336,14 @@
             // 
             // ExtraExtTextBox
             // 
-            this.ExtraExtTextBox.Location = new System.Drawing.Point(111, 127);
+            this.ExtraExtTextBox.Location = new System.Drawing.Point(111, 154);
             this.ExtraExtTextBox.Name = "ExtraExtTextBox";
             this.ExtraExtTextBox.Size = new System.Drawing.Size(55, 20);
             this.ExtraExtTextBox.TabIndex = 4;
             // 
             // SSUserTextBox
             // 
-            this.SSUserTextBox.Location = new System.Drawing.Point(111, 49);
+            this.SSUserTextBox.Location = new System.Drawing.Point(111, 76);
             this.SSUserTextBox.Name = "SSUserTextBox";
             this.SSUserTextBox.Size = new System.Drawing.Size(100, 20);
             this.SSUserTextBox.TabIndex = 1;
@@ -339,7 +351,7 @@
             // ExtraExtLabel
             // 
             this.ExtraExtLabel.AutoSize = true;
-            this.ExtraExtLabel.Location = new System.Drawing.Point(8, 130);
+            this.ExtraExtLabel.Location = new System.Drawing.Point(8, 157);
             this.ExtraExtLabel.Name = "ExtraExtLabel";
             this.ExtraExtLabel.Size = new System.Drawing.Size(83, 13);
             this.ExtraExtLabel.TabIndex = 7;
@@ -348,7 +360,7 @@
             // SkipCheckLabel
             // 
             this.SkipCheckLabel.AutoSize = true;
-            this.SkipCheckLabel.Location = new System.Drawing.Point(8, 104);
+            this.SkipCheckLabel.Location = new System.Drawing.Point(8, 131);
             this.SkipCheckLabel.Name = "SkipCheckLabel";
             this.SkipCheckLabel.Size = new System.Drawing.Size(65, 13);
             this.SkipCheckLabel.TabIndex = 6;
@@ -356,7 +368,7 @@
             // 
             // WorkersNumericUpDown
             // 
-            this.WorkersNumericUpDown.Location = new System.Drawing.Point(111, 179);
+            this.WorkersNumericUpDown.Location = new System.Drawing.Point(111, 206);
             this.WorkersNumericUpDown.Maximum = new decimal(new int[] {
             24,
             0,
@@ -379,7 +391,7 @@
             // RetriesLabel
             // 
             this.RetriesLabel.AutoSize = true;
-            this.RetriesLabel.Location = new System.Drawing.Point(8, 155);
+            this.RetriesLabel.Location = new System.Drawing.Point(8, 182);
             this.RetriesLabel.Name = "RetriesLabel";
             this.RetriesLabel.Size = new System.Drawing.Size(43, 13);
             this.RetriesLabel.TabIndex = 8;
@@ -388,7 +400,7 @@
             // WorkersLabel
             // 
             this.WorkersLabel.AutoSize = true;
-            this.WorkersLabel.Location = new System.Drawing.Point(8, 181);
+            this.WorkersLabel.Location = new System.Drawing.Point(8, 208);
             this.WorkersLabel.Name = "WorkersLabel";
             this.WorkersLabel.Size = new System.Drawing.Size(50, 13);
             this.WorkersLabel.TabIndex = 9;
@@ -396,14 +408,13 @@
             // 
             // RetriesNumericUpDown
             // 
-            this.RetriesNumericUpDown.Location = new System.Drawing.Point(111, 153);
+            this.RetriesNumericUpDown.Location = new System.Drawing.Point(111, 180);
             this.RetriesNumericUpDown.Name = "RetriesNumericUpDown";
             this.RetriesNumericUpDown.Size = new System.Drawing.Size(55, 20);
             this.RetriesNumericUpDown.TabIndex = 5;
             // 
             // FileOptionsGroupBox
             // 
-            this.FileOptionsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FileOptionsGroupBox.Controls.Add(this.AddNotFoundLabel);
             this.FileOptionsGroupBox.Controls.Add(this.AppendLabel);
             this.FileOptionsGroupBox.Controls.Add(this.NestedImgDirLabel);
@@ -418,9 +429,9 @@
             this.FileOptionsGroupBox.Controls.Add(this.UseNointroNameCheckBox);
             this.FileOptionsGroupBox.Controls.Add(this.StripUnicodeCheckBox);
             this.FileOptionsGroupBox.Controls.Add(this.OverviewLenLabel);
-            this.FileOptionsGroupBox.Location = new System.Drawing.Point(611, 6);
+            this.FileOptionsGroupBox.Location = new System.Drawing.Point(241, 6);
             this.FileOptionsGroupBox.Name = "FileOptionsGroupBox";
-            this.FileOptionsGroupBox.Size = new System.Drawing.Size(175, 212);
+            this.FileOptionsGroupBox.Size = new System.Drawing.Size(175, 237);
             this.FileOptionsGroupBox.TabIndex = 0;
             this.FileOptionsGroupBox.TabStop = false;
             this.FileOptionsGroupBox.Text = "File Options";
@@ -556,6 +567,8 @@
             // 
             // MediaOptionsGroupBox
             // 
+            this.MediaOptionsGroupBox.Controls.Add(this.MameImgLabel);
+            this.MediaOptionsGroupBox.Controls.Add(this.MameImgComboBox);
             this.MediaOptionsGroupBox.Controls.Add(this.MaxWidthLabel);
             this.MediaOptionsGroupBox.Controls.Add(this.MaxWidthNumericUpDown);
             this.MediaOptionsGroupBox.Controls.Add(this.MaxHeightLabel);
@@ -587,9 +600,9 @@
             this.MediaOptionsGroupBox.Controls.Add(this.MarqueeSuffixTextBox);
             this.MediaOptionsGroupBox.Controls.Add(this.MarqueeSuffixLabel);
             this.MediaOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MediaOptionsGroupBox.Location = new System.Drawing.Point(6, 6);
+            this.MediaOptionsGroupBox.Location = new System.Drawing.Point(6, 249);
             this.MediaOptionsGroupBox.Name = "MediaOptionsGroupBox";
-            this.MediaOptionsGroupBox.Size = new System.Drawing.Size(553, 212);
+            this.MediaOptionsGroupBox.Size = new System.Drawing.Size(553, 240);
             this.MediaOptionsGroupBox.TabIndex = 0;
             this.MediaOptionsGroupBox.TabStop = false;
             this.MediaOptionsGroupBox.Text = "Media Options";
@@ -597,7 +610,7 @@
             // MaxWidthLabel
             // 
             this.MaxWidthLabel.AutoSize = true;
-            this.MaxWidthLabel.Location = new System.Drawing.Point(8, 180);
+            this.MaxWidthLabel.Location = new System.Drawing.Point(8, 207);
             this.MaxWidthLabel.Name = "MaxWidthLabel";
             this.MaxWidthLabel.Size = new System.Drawing.Size(61, 13);
             this.MaxWidthLabel.TabIndex = 6;
@@ -605,7 +618,7 @@
             // 
             // MaxWidthNumericUpDown
             // 
-            this.MaxWidthNumericUpDown.Location = new System.Drawing.Point(111, 178);
+            this.MaxWidthNumericUpDown.Location = new System.Drawing.Point(111, 205);
             this.MaxWidthNumericUpDown.Maximum = new decimal(new int[] {
             7680,
             0,
@@ -618,7 +631,7 @@
             // MaxHeightLabel
             // 
             this.MaxHeightLabel.AutoSize = true;
-            this.MaxHeightLabel.Location = new System.Drawing.Point(8, 155);
+            this.MaxHeightLabel.Location = new System.Drawing.Point(8, 182);
             this.MaxHeightLabel.Name = "MaxHeightLabel";
             this.MaxHeightLabel.Size = new System.Drawing.Size(64, 13);
             this.MaxHeightLabel.TabIndex = 5;
@@ -626,7 +639,7 @@
             // 
             // ImagePathTextBox
             // 
-            this.ImagePathTextBox.Location = new System.Drawing.Point(111, 126);
+            this.ImagePathTextBox.Location = new System.Drawing.Point(111, 153);
             this.ImagePathTextBox.Name = "ImagePathTextBox";
             this.ImagePathTextBox.Size = new System.Drawing.Size(50, 20);
             this.ImagePathTextBox.TabIndex = 4;
@@ -634,7 +647,7 @@
             // 
             // MaxHeightNumericUpDown
             // 
-            this.MaxHeightNumericUpDown.Location = new System.Drawing.Point(111, 152);
+            this.MaxHeightNumericUpDown.Location = new System.Drawing.Point(111, 179);
             this.MaxHeightNumericUpDown.Maximum = new decimal(new int[] {
             4320,
             0,
@@ -655,7 +668,7 @@
             // ImagePathLabel
             // 
             this.ImagePathLabel.AutoSize = true;
-            this.ImagePathLabel.Location = new System.Drawing.Point(8, 129);
+            this.ImagePathLabel.Location = new System.Drawing.Point(8, 156);
             this.ImagePathLabel.Name = "ImagePathLabel";
             this.ImagePathLabel.Size = new System.Drawing.Size(64, 13);
             this.ImagePathLabel.TabIndex = 4;
@@ -690,7 +703,7 @@
             // 
             // ImageSuffixTextBox
             // 
-            this.ImageSuffixTextBox.Location = new System.Drawing.Point(111, 100);
+            this.ImageSuffixTextBox.Location = new System.Drawing.Point(111, 127);
             this.ImageSuffixTextBox.Name = "ImageSuffixTextBox";
             this.ImageSuffixTextBox.Size = new System.Drawing.Size(50, 20);
             this.ImageSuffixTextBox.TabIndex = 3;
@@ -707,7 +720,7 @@
             // ImageSuffixLabel
             // 
             this.ImageSuffixLabel.AutoSize = true;
-            this.ImageSuffixLabel.Location = new System.Drawing.Point(8, 102);
+            this.ImageSuffixLabel.Location = new System.Drawing.Point(8, 129);
             this.ImageSuffixLabel.Name = "ImageSuffixLabel";
             this.ImageSuffixLabel.Size = new System.Drawing.Size(68, 13);
             this.ImageSuffixLabel.TabIndex = 3;
@@ -729,7 +742,7 @@
             this.ImgFormatComboBox.Items.AddRange(new object[] {
             "jpg",
             "png"});
-            this.ImgFormatComboBox.Location = new System.Drawing.Point(111, 73);
+            this.ImgFormatComboBox.Location = new System.Drawing.Point(111, 100);
             this.ImgFormatComboBox.Name = "ImgFormatComboBox";
             this.ImgFormatComboBox.Size = new System.Drawing.Size(50, 21);
             this.ImgFormatComboBox.TabIndex = 2;
@@ -746,7 +759,7 @@
             // ImgFormatLabel
             // 
             this.ImgFormatLabel.AutoSize = true;
-            this.ImgFormatLabel.Location = new System.Drawing.Point(8, 76);
+            this.ImgFormatLabel.Location = new System.Drawing.Point(8, 103);
             this.ImgFormatLabel.Name = "ImgFormatLabel";
             this.ImgFormatLabel.Size = new System.Drawing.Size(74, 13);
             this.ImgFormatLabel.TabIndex = 2;
@@ -811,9 +824,9 @@
             this.ConsoleImgLabel.AutoSize = true;
             this.ConsoleImgLabel.Location = new System.Drawing.Point(8, 49);
             this.ConsoleImgLabel.Name = "ConsoleImgLabel";
-            this.ConsoleImgLabel.Size = new System.Drawing.Size(66, 13);
+            this.ConsoleImgLabel.Size = new System.Drawing.Size(80, 13);
             this.ConsoleImgLabel.TabIndex = 1;
-            this.ConsoleImgLabel.Text = "Image Type:";
+            this.ConsoleImgLabel.Text = "Console Image:";
             // 
             // DownloadMarqueesCheckBox
             // 
@@ -939,11 +952,88 @@
             // AppStatusStrip
             // 
             this.AppStatusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.AppStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ModeToolStripStatusLabel});
             this.AppStatusStrip.Location = new System.Drawing.Point(0, 578);
             this.AppStatusStrip.Name = "AppStatusStrip";
             this.AppStatusStrip.Size = new System.Drawing.Size(800, 22);
             this.AppStatusStrip.SizingGrip = false;
             this.AppStatusStrip.TabIndex = 4;
+            // 
+            // MameImgComboBox
+            // 
+            this.MameImgComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MameImgComboBox.FormattingEnabled = true;
+            this.MameImgComboBox.Items.AddRange(new object[] {
+            "s",
+            "t",
+            "m",
+            "c",
+            "b",
+            "3b",
+            "fly"});
+            this.MameImgComboBox.Location = new System.Drawing.Point(111, 73);
+            this.MameImgComboBox.Name = "MameImgComboBox";
+            this.MameImgComboBox.Size = new System.Drawing.Size(50, 21);
+            this.MameImgComboBox.TabIndex = 11;
+            // 
+            // MameImgLabel
+            // 
+            this.MameImgLabel.AutoSize = true;
+            this.MameImgLabel.Location = new System.Drawing.Point(8, 76);
+            this.MameImgLabel.Name = "MameImgLabel";
+            this.MameImgLabel.Size = new System.Drawing.Size(74, 13);
+            this.MameImgLabel.TabIndex = 11;
+            this.MameImgLabel.Text = "MAME Image:";
+            // 
+            // MameSrcComboBox
+            // 
+            this.MameSrcComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MameSrcComboBox.FormattingEnabled = true;
+            this.MameSrcComboBox.Items.AddRange(new object[] {
+            "ss",
+            "adb",
+            "mamedb",
+            "gdb"});
+            this.MameSrcComboBox.Location = new System.Drawing.Point(111, 49);
+            this.MameSrcComboBox.Name = "MameSrcComboBox";
+            this.MameSrcComboBox.Size = new System.Drawing.Size(55, 21);
+            this.MameSrcComboBox.TabIndex = 11;
+            // 
+            // MameSrcLabel
+            // 
+            this.MameSrcLabel.AutoSize = true;
+            this.MameSrcLabel.Location = new System.Drawing.Point(8, 52);
+            this.MameSrcLabel.Name = "MameSrcLabel";
+            this.MameSrcLabel.Size = new System.Drawing.Size(79, 13);
+            this.MameSrcLabel.TabIndex = 11;
+            this.MameSrcLabel.Text = "MAME Source:";
+            // 
+            // ModeComboBox
+            // 
+            this.ModeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ModeComboBox.FormattingEnabled = true;
+            this.ModeComboBox.Items.AddRange(new object[] {
+            "Console",
+            "MAME"});
+            this.ModeComboBox.Location = new System.Drawing.Point(549, 127);
+            this.ModeComboBox.Name = "ModeComboBox";
+            this.ModeComboBox.Size = new System.Drawing.Size(121, 21);
+            this.ModeComboBox.TabIndex = 11;
+            // 
+            // ModeLabel
+            // 
+            this.ModeLabel.AutoSize = true;
+            this.ModeLabel.Location = new System.Drawing.Point(546, 111);
+            this.ModeLabel.Name = "ModeLabel";
+            this.ModeLabel.Size = new System.Drawing.Size(77, 13);
+            this.ModeLabel.TabIndex = 12;
+            this.ModeLabel.Text = "Scraper Mode:";
+            // 
+            // ModeToolStripStatusLabel
+            // 
+            this.ModeToolStripStatusLabel.Name = "ModeToolStripStatusLabel";
+            this.ModeToolStripStatusLabel.Size = new System.Drawing.Size(0, 17);
             // 
             // ConfigureSettingsUserControl
             // 
@@ -958,6 +1048,7 @@
             this.MainTabPage.ResumeLayout(false);
             this.MainTabPage.PerformLayout();
             this.SettingsTabPage.ResumeLayout(false);
+            this.SettingsTabPage.PerformLayout();
             this.ScraperOptionsGroupBox.ResumeLayout(false);
             this.ScraperOptionsGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WorkersNumericUpDown)).EndInit();
@@ -971,6 +1062,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.MaxHeightNumericUpDown)).EndInit();
             this.AppMenuStrip.ResumeLayout(false);
             this.AppMenuStrip.PerformLayout();
+            this.AppStatusStrip.ResumeLayout(false);
+            this.AppStatusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1057,5 +1150,12 @@
         private System.Windows.Forms.Button CancelScrapeButton;
         private System.Windows.Forms.Button ScrapeButton;
         private System.Windows.Forms.GroupBox ScraperOptionsGroupBox;
+        private System.Windows.Forms.Label MameImgLabel;
+        private System.Windows.Forms.ComboBox MameImgComboBox;
+        private System.Windows.Forms.Label MameSrcLabel;
+        private System.Windows.Forms.ComboBox MameSrcComboBox;
+        private System.Windows.Forms.Label ModeLabel;
+        private System.Windows.Forms.ComboBox ModeComboBox;
+        private System.Windows.Forms.ToolStripStatusLabel ModeToolStripStatusLabel;
     }
 }

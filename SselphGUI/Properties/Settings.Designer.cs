@@ -217,7 +217,7 @@ namespace SselphGUI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("-mame_img=t,m,s,c")]
+        [global::System.Configuration.DefaultSettingValueAttribute("-mame_img=t")]
         public string mame_img {
             get {
                 return ((string)(this["mame_img"]));
@@ -229,7 +229,7 @@ namespace SselphGUI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("-mame_src=adb,gdb")]
+        [global::System.Configuration.DefaultSettingValueAttribute("-mame_src=adb")]
         public string mame_src {
             get {
                 return ((string)(this["mame_src"]));

@@ -38,6 +38,9 @@ namespace SselphGUI
             // console_img
             string console_img = ConsoleImgComboBox.SelectedItem.ToString();
             Properties.Settings.Default.console_img = "-console_img=" + console_img;
+            // mame_img
+            string mame_img = MameImgComboBox.SelectedItem.ToString();
+            Properties.Settings.Default.mame_img = "-mame_img=" + mame_img;
             // img_format
             string img_format = ImgFormatComboBox.SelectedItem.ToString();
             Properties.Settings.Default.img_format = "-img_format=" + img_format;
@@ -236,6 +239,9 @@ namespace SselphGUI
             // console_src
             string console_src = ConsoleSrcComboBox.SelectedItem.ToString();
             Properties.Settings.Default.console_src = "-console_src=" + console_src;
+            // mame_src
+            string mame_src = MameSrcComboBox.SelectedItem.ToString();
+            Properties.Settings.Default.mame_src = "-mame_src=" + mame_src;
             // ss_user
             if (SSUserTextBox.Text != "")
             {
@@ -283,6 +289,16 @@ namespace SselphGUI
             // workers
             string workers = WorkersNumericUpDown.Value.ToString();
             Properties.Settings.Default.workers = "-workers=" + workers;
+            // mode
+            string mode = ModeComboBox.SelectedItem.ToString();
+            if (mode == "Console")
+            {
+                Properties.Settings.Default.mame = "-mame=false";
+            }
+            else if (mode == "MAME")
+            {
+                Properties.Settings.Default.mame = "-mame=true";
+            }
 
             // save the settings
             Properties.Settings.Default.Save();
@@ -307,6 +323,10 @@ namespace SselphGUI
             string console_img = Properties.Settings.Default.console_img;
             console_img = console_img.Remove(0, 13);
             ConsoleImgComboBox.SelectedItem = console_img;
+            // mame_img
+            string mame_img = Properties.Settings.Default.mame_img;
+            mame_img = mame_img.Remove(0, 10);
+            MameImgComboBox.SelectedItem = mame_img;
             // img_format
             string img_format = Properties.Settings.Default.img_format;
             img_format = img_format.Remove(0, 12);
@@ -469,6 +489,10 @@ namespace SselphGUI
             string console_src = Properties.Settings.Default.console_src;
             console_src = console_src.Remove(0, 13);
             ConsoleSrcComboBox.SelectedItem = console_src;
+            // mame_src
+            string mame_src = Properties.Settings.Default.mame_src;
+            mame_src = mame_src.Remove(0, 10);
+            MameSrcComboBox.SelectedItem = mame_src;
             // ss_user
             string ss_user = Properties.Settings.Default.ss_user;
             if (ss_user != "-ss_user=")
@@ -520,6 +544,26 @@ namespace SselphGUI
             {
                 WorkersNumericUpDown.Value = workers_decimal;
             }
+            // mode
+            string mode = Properties.Settings.Default.mame;
+            if (mode == "-mame=false")
+            {
+                ModeComboBox.SelectedIndex = 0;
+                ModeToolStripStatusLabel.Text = "Scraper Mode: Console";
+                ConsoleSrcComboBox.Enabled = true;
+                ConsoleImgComboBox.Enabled = true;
+                MameSrcComboBox.Enabled = false;
+                MameImgComboBox.Enabled = false;
+            }
+            else if (mode == "-mame=true")
+            {
+                ModeComboBox.SelectedIndex = 1;
+                ModeToolStripStatusLabel.Text = "Scraper Mode: MAME";
+                MameSrcComboBox.Enabled = true;
+                MameImgComboBox.Enabled = true;
+                ConsoleSrcComboBox.Enabled = false;
+                ConsoleImgComboBox.Enabled = false;
+            }
         }
         #endregion
 
@@ -544,8 +588,8 @@ namespace SselphGUI
             Properties.Settings.Default.img_workers = "-img_workers=0";
             Properties.Settings.Default.lang = "-lang=en";
             Properties.Settings.Default.mame = "-mame=false";
-            Properties.Settings.Default.mame_img = "-mame_img=t,m,s,c";
-            Properties.Settings.Default.mame_src = "-mame_src=adb,gdb";
+            Properties.Settings.Default.mame_img = "-mame_img=t";
+            Properties.Settings.Default.mame_src = "-mame_src=adb";
             Properties.Settings.Default.marquee_dir = "";
             Properties.Settings.Default.marquee_format = "-marquee_format=png";
             Properties.Settings.Default.marquee_path = "-marquee_path=images";
