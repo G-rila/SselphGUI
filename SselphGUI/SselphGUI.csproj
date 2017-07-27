@@ -38,6 +38,9 @@
     <Reference Include="ConsoleControl">
       <HintPath>..\..\ConsoleControl.dll</HintPath>
     </Reference>
+    <Reference Include="ConsoleControlAPI">
+      <HintPath>..\..\..\..\OneDrive\VS2017 Projects\ConsoleControlAPI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
